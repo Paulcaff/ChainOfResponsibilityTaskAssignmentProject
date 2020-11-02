@@ -4,5 +4,5 @@ public interface Chain {
 
     public void setNextChain(Chain nextChain);
 
-    public String assignTask(User user);
+    public void assignTask(User user);
 }

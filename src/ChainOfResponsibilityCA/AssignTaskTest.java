@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AssignTaskTest {
-    AssignTask assignTask = new AssignTask();
+    AssignOwnerTask assignTask = new AssignOwnerTask();
     User owner = new User();
     User manager = new User("Manager", "managerpassword");
     User ceo = new User("CEO", "ceopassword");

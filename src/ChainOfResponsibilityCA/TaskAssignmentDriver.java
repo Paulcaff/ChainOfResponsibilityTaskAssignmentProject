@@ -8,7 +8,7 @@ public class TaskAssignmentDriver {
         User manager = new User("Manager", "managerpassword");
         User employee = new User("Employee", "employeepassword");
 
-        AssignTask assignTask = new AssignTask();
+        AssignOwnerTask assignTask = new AssignOwnerTask();
 
         assignTask.getTask(owner);
         assignTask.getTask(ceo);
