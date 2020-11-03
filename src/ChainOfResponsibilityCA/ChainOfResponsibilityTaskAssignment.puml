@@ -1,6 +1,17 @@
 @startuml
 skinparam classAttributeIconSize 0
 
+
+class TaskAssignmentDriver {
+    +main():void
+}
+
+interface Chain {
+    +setNextChain(Chain nextChain):void
+    +assignTask(User user):void
+}
+
+
 class AssignOwnerTask {
       -User user
       -Chain nextInChain
@@ -37,19 +48,15 @@ class AssignEmployeeTask {
       +setUser(User user):void
 }
 
-class TaskAssignmentDriver {
-    +main():void
-}
 
-interface Chain {
-    +setNextChain(Chain nextChain):void
-    +assignTask(User user):void
-}
-
+ TaskAssignmentDriver --> Chain
+ Chain  <-- Chain
  Chain  <|-- AssignOwnerTask
  Chain  <|-- AssignCEOTask
  Chain  <|-- AssignManagerTask
  Chain  <|-- AssignEmployeeTask
- TaskAssignmentDriver --> Chain
+
+
+
 
 @enduml

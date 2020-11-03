@@ -17,8 +17,6 @@ class AssignTaskTest {
     Chain managerChain = new AssignManagerTask();
     Chain employeeChain = new AssignEmployeeTask();
 
-
-
     @Test
     void getTaskOwner() {
         ownerChain.setNextChain(ceoChain);
