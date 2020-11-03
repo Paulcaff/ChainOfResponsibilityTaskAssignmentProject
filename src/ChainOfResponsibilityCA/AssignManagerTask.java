@@ -12,14 +12,17 @@ public class AssignManagerTask implements Chain {
     }
 
     @Override
-    public void assignTask(User user) {
+    public String assignTask(User user) {
 
         if(user.getPosition() == "Manager" && user.getPassword() == "managerpassword"){
             System.out.println("Manager must attend daily stand-up @ 9-30 AM");
+            return "Manager must attend daily stand-up @ 9-30 AM";
         }
         else {
-            nextInChain.assignTask(user);
+            return nextInChain.assignTask(user);
+
         }
+
     }
 
     public AssignManagerTask() {

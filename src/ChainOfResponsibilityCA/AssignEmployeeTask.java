@@ -12,13 +12,15 @@ public class AssignEmployeeTask implements Chain {
     }
 
     @Override
-    public void assignTask(User user) {
+    public String assignTask(User user) {
 
         if(user.getPosition() == "Employee" && user.getPassword() == "employeepassword"){
             System.out.println("Employee must complete testing of assignment");
+            return "Employee must complete testing of assignment";
         }
         else {
             System.out.println("The details entered are Incorrect");
+            return "The details entered are Incorrect";
         }
     }
 

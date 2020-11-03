@@ -13,13 +13,14 @@ public class AssignOwnerTask implements Chain {
     }
 
     @Override
-    public void assignTask(User user) {
+    public String assignTask(User user) {
 
         if(user.getPosition() == "Owner" && user.getPassword() == "ownerpassword"){
             System.out.println("Owner must attend AGM @2PM");
+            return "Owner must attend AGM @2PM";
         }
         else {
-            nextInChain.assignTask(user);
+             return nextInChain.assignTask(user);
         }
     }
 

@@ -11,13 +11,15 @@ public class AssignCEOTask implements Chain {
     }
 
     @Override
-    public void assignTask(User user) {
+    public String assignTask(User user) {
 
         if(user.getPosition() == "CEO" && user.getPassword() == "ceopassword"){
             System.out.println("CEO must prepare presentation for AGM @ 2PM");
+            return "CEO must prepare presentation for AGM @ 2PM";
         }
         else {
-            nextInChain.assignTask(user);
+            return nextInChain.assignTask(user);
+
         }
     }
 
