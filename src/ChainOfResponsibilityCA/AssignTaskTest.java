@@ -4,16 +4,23 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class AssignTaskTest {
-    AssignOwnerTask assignTask = new AssignOwnerTask();
-    User owner = new User();
-    User manager = new User("Manager", "managerpassword");
-    User ceo = new User("CEO", "ceopassword");
+class AssignTaskTest  {
 
+    User user = new User();
+    Chain ownerChain = new AssignOwnerTask();
+    Chain ceoChain = new AssignCEOTask();
+    Chain managerChain = new AssignManagerTask();
+    Chain employeeChain = new AssignEmployeeTask();
+
+//    ownerChain.setNextChain(ceoChain);
+//    ceoChain.setNextChain(managerChain);
+//    managerChain.setNextChain(employeeChain);
+//
+//
 //    @Test
 //    void getTaskOwner() {
 //        System.out.println("Owner");
-//        assertEquals("The Owner needs to attend AGM @2PM", assignTask.assignTask(owner));
+//        assertEquals("The Owner needs to attend AGM @2PM", ownerChain.assignTask(user));
 //    }
 //
 //    @Test

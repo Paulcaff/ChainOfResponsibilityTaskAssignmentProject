@@ -2,7 +2,6 @@ package ChainOfResponsibilityCA;
 
 public class AssignManagerTask implements Chain {
 
-    private String task;
     private User user = new User();
     private Chain nextInChain;
 
@@ -27,9 +26,7 @@ public class AssignManagerTask implements Chain {
         this.user = user;
     }
 
-    public void setTask(String task) {
-        this.task = task;
-    }
+
 
     public User getUser() {
         return user;
