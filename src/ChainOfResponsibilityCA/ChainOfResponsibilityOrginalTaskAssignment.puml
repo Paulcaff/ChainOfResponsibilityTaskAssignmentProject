@@ -1,0 +1,33 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class AssignTask {
+-String task;
+-User user;
+
++getTask(User user):String
++setTask(String task):void
++getUser():User
+setUser(User user):void
+}
+
+class User {
+-String position;
+-String password;
+
++getPosition():String
++setPosition(String position):void
++getPassword():String
++setPassword(String password):void
+}
+
+class TaskAssignmentDriver {
+    +main():void
+}
+
+TaskAssignmentDriver --> AssignTask
+AssignTask --> User
+
+
+
+@enduml
